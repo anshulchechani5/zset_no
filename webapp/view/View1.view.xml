@@ -1,0 +1,51 @@
+<mvc:View controllerName="zsetnumber.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+    xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core" 
+    xmlns:l="sap.ui.layout"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    width="100%">
+    <Page id="page" title="{i18n>title}">
+     <content>
+            <Panel id="a1" expandable="true" expanded="true" headerText="Item">
+                <f:SimpleForm id="a2" layout="ResponsiveGridLayout" columnsL="3" columnsXL="3" columnsM="2" editable="true">
+                    <f:content>
+                     <core:Title id="a3" text="Entry Set Number "/>
+                        <Label id="a17" required="true" text="Final Set No."/>
+                        <Input id="fsn" placeholder="Please Enter Set Number" submit="setnumber" editable="true"/>
+                       
+                        <Label id="a4" required="true" text="Plant"/>
+                        <Input id="plant" editable="false"   />
+                        <Label id="a6" required="true" text="Dyeing M/C Number"/>
+                        <Input id="mno"  editable="false"  />
+                        
+                        <core:Title id="a12"/>
+                        <Label id="a13" required="true" text="Date"/>
+                        <DatePicker id="date" editable="false" valueFormat="yyyy-MM-dd" displayFormat="yyyy-MM-dd" value="{oDateModel>/dDefaultDate}" />
+                        <Label id="a15" required="true" text="Set Length "/>
+                        <Input id="sln" placeholder="Enter Set Length Number"/>
+                        <Label id="a10" required="true" text="Dyeing Sort"/>
+                        <Input id="dyeisort" placeholder="Enter Dyeing Sort " valueHelpRequest="dyeingsort" showValueHelp="true"/>
+                       
+                        <core:Title id="a16"/>
+                       <Label id="a14" required="true" text="Set Number"/>
+                        <Input id="sno" editable="false" />
+                         <Label id="a11" required="true" text="Dyeing desc"/>
+                        <Input id="dyeidesc" editable="false"/>
+
+                    </f:content>
+                </f:SimpleForm>
+                <Bar id="bar">
+                    <contentRight>
+                        <Button id="bt1" icon="sap-icon://save" text="Save" type="Emphasized" press="SAVEDATA" activeIcon="sap-icon://save"/>
+                    </contentRight>
+                </Bar>
+            </Panel>
+        </content >
+    </Page>
+</mvc:View>
